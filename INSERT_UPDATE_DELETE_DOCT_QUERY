@@ -1,0 +1,23 @@
+INSERT QUERY
+
+db.Students.insertOne({
+  Rollno: 96,
+  Name: "Sanjeev",
+  Course: "BSCIT",
+  Address: "GTB"
+})
+
+Query Document
+
+ db.Students.find({Name:"Sanjeev"})
+
+Update query
+
+db.Students.updateMany(
+  { Name: "Sanjeev" },
+  { $set: { Name: "Rajbhar Sanjeev" } }
+)
+
+delete query
+
+db.Students.deleteMany({ name: "Sanjeev" })
