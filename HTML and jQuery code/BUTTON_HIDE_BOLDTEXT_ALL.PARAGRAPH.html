@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        $("p").hide();
+      });
+      $("#btn2").click(function() {
+        $(".bold2").hide();
+      });
+    });
+  </script>
+</head>
+<body bgcolor="pink">
+  <h2>This is a heading</h2>
+
+  <p>This is a paragraph</p>
+  <p>This is another paragraph</p>
+
+  <br>
+
+  <button id="btn1">Click me to hide the paragraphs</button>
+
+  <br><br>
+
+  <b class="bold1">This is one bold text which is not hidden</b>
+
+  <br><br>
+
+  <b class="bold2">This will be hidden</b>
+
+  <br><br>
+
+  <button id="btn2">Click me to hide the bold text</button>
+</body>
+</html>

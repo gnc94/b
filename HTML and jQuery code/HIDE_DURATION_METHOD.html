@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("p.test").hide(3000); // hides over 3 seconds
+      });
+    });
+  </script>
+</head>
+<body>
+  <button>Hide</button>
+  <p class="test">I will disappear</p>
+  <p>I won't</p>
+</body>
+</html>

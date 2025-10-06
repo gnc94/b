@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("#div1").fadeToggle();        // default speed
+        $("#div2").fadeToggle("slow");  // slow fade
+        $("#div3").fadeToggle(3000);    // fade over 3 seconds
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>Demonstrate fadeToggle() with different parameters</p>
+
+  <button>Click to fade toggle boxes</button>
+
+  <br><br>
+
+  <div id="div1" style="width:80px; height:80px; background-color:pink;"></div>
+  <br>
+  <div id="div2" style="width:80px; height:80px; background-color:grey;"></div>
+  <br>
+  <div id="div3" style="width:80px; height:80px; background-color:yellow;"></div>
+</body>
+</html>

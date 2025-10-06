@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Alert the text content of the paragraph
+      $("#text").click(function() {
+        alert($("p").text());
+      });
+
+      // Alert the HTML content of the paragraph
+      $("#html").click(function() {
+        alert($("p").html());
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>The quick <b>brown fox</b> jumps over the <b>lazy dog</b></p>
+
+  <button id="text">Get Text</button>
+  <button id="html">Get HTML</button>
+</body>
+</html>

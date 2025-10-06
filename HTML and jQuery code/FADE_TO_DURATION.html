@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("#div1").fadeTo("slow", 0.15);  // fade to 15% opacity
+        $("#div2").fadeTo("slow", 0.4);   // fade to 40% opacity
+        $("#div3").fadeTo("slow", 0.7);   // fade to 70% opacity
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>Demonstrate fadeTo() with different parameters</p>
+
+  <button>Click to fade to boxes</button>
+
+  <br><br>
+
+  <div id="div1" style="width:80px; height:80px; background-color:pink;"></div>
+  <br>
+  <div id="div2" style="width:80px; height:80px; background-color:grey;"></div>
+  <br>
+  <div id="div3" style="width:80px; height:80px; background-color:yellow;"></div>
+</body>
+</html>

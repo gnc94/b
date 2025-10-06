@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").mousedown(function() {
+        $("p.test").toggle();
+      });
+      $("button").mouseup(function() {
+        $("p.hello").toggle();
+      });
+    });
+  </script>
+</head>
+<body>
+  <button>Toggle</button>
+  <p class="test">Down toggle</p>
+  <p class="hello">Up toggle</p>
+</body>
+</html>
