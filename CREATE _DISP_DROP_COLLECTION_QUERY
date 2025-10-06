@@ -1,0 +1,14 @@
+Create Collection
+
+use db
+
+db.createCollection("Students")
+db.createCollection("Members")
+
+DISPLAY COLLECTION
+
+show collections
+
+DROP COLLECTIN
+
+db.Members.drop()
