@@ -1,0 +1,42 @@
+from pymongo import MongoClient
+
+client = MongoClient('localhost', 27017)
+db = client['mydbToday']
+col = db['example']
+
+col.drop()
+
+#1. Insert documents
+data = [
+    {"_id": "101", "name": "Ram", "age": 26, "city": "Hyderabad"},
+    {"_id": "102", "name": "Rahim", "age": 27, "city": "Bangalore"},
+    {"_id": "103", "name": "Robert", "age": 28, "city": "Mumbai"}
+]
+
+col.insert_many(data)
+print("Data inserted successfully!")
+
+# 2. Retrieve documents
+print("\nAll documents in the collection:")
+for doc in col.find():
+    print(doc)
+
+doc = col.find_one({"_id": "101"})
+print("\nSingle document with _id 101:")
+print(doc)
+
+# 3. Update documents
+col.update_one({"_id": "102"}, {"$set": {"city": "Visakhapatnam"}})
+col.update_many({}, {"$inc": {"age": 1}})
+
+print("\nDocuments after updates:")
+for doc in col.find():
+    print(doc)
+
+# 4. Delete documents
+col.delete_one({"_id": "103"})
+col.delete_many({"age": {"$gt": 27}})
+
+print("\nDocuments after deletions:")
+for doc in col.find():
+    print(doc)
